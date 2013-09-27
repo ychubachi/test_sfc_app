@@ -1,3 +1,11 @@
 language: ruby
 rvm:
 - 2.0.0
+deploy:
+  provider: heroku
+  api_key:
+    secure: Rm7VpHoYvu+VrgKPBO3AtlDTvdYkOpa/nqOymn+5N+0hnudCdjJUYk4bknZHhqsiQ0DHwvujiUCR9x9RdTGz1d8P/xExo/01rbTS6s5dIyt44BoWtbXIKRfK1M90ib0oIcOnCgNxs4rwW37UJCLmhzfomVM42KP8xUUL1tyHoUo=
+  app: boiling-crag-1818
+  on:
+    repo: ychubachi/test_sfc_app
+  run: "rake db:migrate"
